@@ -32,6 +32,17 @@ http.createServer(async function(req, res){
 		return res.end();
 	}
 	
+	if (currentURL.pathname === '/kool'){
+		res.writeHead(200, {"Content-type": "text/html"});
+		//res.write("Veebiserver käivitus!");
+		res.write(pageHead);
+		res.write(pageBanner);
+		res.write('\t<h1>Tallinna Ülikool</h1>\n\t<p>Tulin Tallinna Ülikooli informaatikat õppima, sest see pakkus mulle huvi. Interaktsioonidisaini valisin, kuna disainimine mulle meeldib.</p>\t<hr>');
+		res.write(pageFoot);
+		return res.end();
+	
+	}
+	
 	else if (currentURL.pathname === '/vanasona'){
 		res.writeHead(200, {"Content-type": "text/html"});
 		//res.write("Veebiserver käivitus!");
