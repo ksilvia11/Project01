@@ -36,6 +36,7 @@ http.createServer(async function(req, res){
 		res.writeHead(200, {"Content-type": "text/html"});
 		//res.write("Veebiserver käivitus!");
 		res.write(pageHead);
+		res.write(pageBanner);
 		res.write('\t<h1> Tänane Eesti vanasõna </h1>\n\t<p>Siin näed tänaseks päevaks loositud vanasõna.</p>\t<hr>');
 		res.write(pageFoot);
 		return res.end();
